@@ -1,11 +1,6 @@
 ---
-name: Rubber Duck Protocol (Animated)
+name: quack-live
 description: Guides you through articulating your problem, with animated terminal ducks using ANSI escape codes.
-command: quack-live
-author: hardiksingh
-version: 1.0.0
-tags: [debugging, learning, problem-solving, animation, terminal]
-compatibility: Requires terminal with ANSI escape code support. May not work in all environments.
 ---
 
 # Rubber Duck Protocol (Animated Edition)

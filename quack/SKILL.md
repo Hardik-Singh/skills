@@ -1,10 +1,6 @@
 ---
-name: Rubber Duck Protocol
+name: quack
 description: Guides you through articulating your problem before jumping to solutions. The friction that creates insight.
-command: quack
-author: hardiksingh
-version: 1.0.0
-tags: [debugging, learning, problem-solving]
 ---
 
 # Rubber Duck Protocol

@@ -1,10 +1,6 @@
 ---
-name: Rubber Duck Protocol (ASCII Art)
+name: quack-art
 description: Guides you through articulating your problem, with expressive ASCII art duck companions.
-command: quack-art
-author: hardiksingh
-version: 1.0.0
-tags: [debugging, learning, problem-solving, ascii-art]
 ---
 
 # Rubber Duck Protocol (ASCII Art Edition)

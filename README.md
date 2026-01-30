@@ -8,18 +8,23 @@ Skills are custom prompts that extend Claude Code's capabilities. They're invoke
 
 ## Installation
 
-1. Copy the `.md` file for the skill you want to your Claude Code skills directory:
-   ```bash
-   # Global skills (available in all projects)
-   cp rubber-duck.md ~/.claude/skills/
+Skills are directories containing a `SKILL.md` file. Copy the skill directory to your Claude Code skills folder:
 
-   # Project-specific skills
-   cp rubber-duck.md .claude/skills/
-   ```
+```bash
+# Global skills (available in all projects)
+cp -r quack ~/.claude/skills/
 
-2. Restart Claude Code or start a new session
+# Project-specific skills
+cp -r quack .claude/skills/
+```
 
-3. Use the skill with its slash command (e.g., `/quack`)
+Or run the setup script to install all skills:
+
+```bash
+./demo/setup.sh
+```
+
+Then start a new Claude Code session to use the skills.
 
 ## Available Skills
 
@@ -33,9 +38,9 @@ The Rubber Duck Protocol restores the friction that creates insight.
 
 | Variant | Command | Description |
 |---------|---------|-------------|
-| [rubber-duck.md](./rubber-duck.md) | `/quack` | Pure personality—warm, guiding voice |
-| [rubber-duck-ascii.md](./rubber-duck-ascii.md) | `/quack-art` | Adds ASCII art ducks with emotional states |
-| [rubber-duck-animated.md](./rubber-duck-animated.md) | `/quack-live` | Terminal animations with ANSI escape codes |
+| [quack/](./quack/) | `/quack` | Pure personality—warm, guiding voice |
+| [quack-art/](./quack-art/) | `/quack-art` | Adds ASCII art ducks with emotional states |
+| [quack-live/](./quack-live/) | `/quack-live` | Terminal animations with ANSI escape codes |
 
 **Why it works:**
 - 50%+ of problems solve themselves during articulation
@@ -43,12 +48,60 @@ The Rubber Duck Protocol restores the friction that creates insight.
 - Root causes found instead of symptom-chasing
 - The duck is warm and collaborative, not annoying
 
+### Arcade
+
+69 terminal games playable directly in Claude Code. Three tiers for different needs.
+
+| Tier | Command | Games | Best For |
+|------|---------|-------|----------|
+| [arcade-light/](./arcade-light/) | `/arcade-light` | 10 | Quick sessions, reliable classics |
+| [arcade/](./arcade/) | `/arcade` | 30 | Balanced play, good variety |
+| [arcade-full/](./arcade-full/) | `/arcade-full` | 69 | Complete collection, everything |
+
+**Quick start:**
+```bash
+/arcade              # Show menu
+/arcade wordle       # Play Wordle
+/arcade blackjack    # Play Blackjack
+/arcade random       # Random game
+```
+
+**Categories:** Quick Play, Word Games, Logic & Numbers, Board Games, Card Games, Action Games, Trivia, Code Games
+
+See [arcade/README.md](./arcade/README.md) for full game list and Twitter copy.
+
+## Skill Structure
+
+Each skill is a directory containing a `SKILL.md` file:
+
+```
+skill-name/
+└── SKILL.md
+```
+
+The `SKILL.md` file has YAML frontmatter with `name` and `description`:
+
+```yaml
+---
+name: skill-name
+description: What this skill does
+---
+
+# Skill Title
+
+Your prompt content here...
+```
+
 ## Contributing
 
 Have a skill idea? The best skills are:
 - **Opinionated** — They have a clear philosophy
 - **Counter-cultural** — They do something AI tools usually don't
 - **Memorable** — Easy to remember when to use them
+
+---
+
+*I'm a student just here to have fun—these aren't utility tools, they're vibes. Really inspired by [@bcherny](https://x.com/bcherny) (Boris). I appreciate all the feedback and will probably open this up for community contributions soon. Stay tuned for more random stuff!*
 
 ## License
 
